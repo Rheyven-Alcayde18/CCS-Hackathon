@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reservation | LSPU-SPCC Hackathon</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="app-page">
+
+    <nav class="navbar">
+
+        <a href="login.html" class="brand">
+            <span class="brand-mark">L</span>
+
+            <div>
+                <b>LSPU-SPCC</b>
+                <small>HACKATHON 2026</small>
+            </div>
+        </a>
+
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a class="active" href="reservation.html">Reservation</a>
+            <a href="schedule.html">Schedule</a>
+               <a href="index.html">About</a>
+        </div>
+
+    </nav>
+
+
+    <main class="content">
+
+        <div class="page-title">
+
+            <span class="eyebrow">SLOT BOOKING</span>
+
+            <h1>Reserve your event slot.</h1>
+
+            <p>
+                Choose an available date and time for your
+                hackathon check-in and workspace reservation.
+            </p>
+
+        </div>
+
+
+        <div class="reservation-layout">
+
+            <!-- CALENDAR -->
+            <section class="panel">
+
+                <div class="calendar-head">
+
+                    <button type="button" id="prevMonth">
+                        ‹
+                    </button>
+
+                    <h2 id="calendarTitle">
+                        September 2026
+                    </h2>
+
+                    <button type="button" id="nextMonth">
+                        ›
+                    </button>
+
+                </div>
+
+
+                <div class="week">
+
+                    <b>Sun</b>
+                    <b>Mon</b>
+                    <b>Tue</b>
+                    <b>Wed</b>
+                    <b>Thu</b>
+                    <b>Fri</b>
+                    <b>Sat</b>
+
+                </div>
+
+
+                <!-- JavaScript generates the dates here -->
+                <div class="calendar" id="calendar"></div>
+
+            </section>
+
+
+            <!-- AVAILABLE SLOTS -->
+            <section class="panel">
+
+                <div class="panel-head">
+
+                    <h2>Available Slots</h2>
+
+                    <span
+                        class="badge"
+                        id="selectedDateBadge">
+                        SEPT 20
+                    </span>
+
+                </div>
+
+
+                <div class="slots" id="slots">
+
+                    <button
+                        type="button"
+                        data-slot="08:00 AM">
+
+                        08:00 AM
+
+                        <span>
+                            Available
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        data-slot="09:00 AM">
+
+                        09:00 AM
+
+                        <span>
+                            Available
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        data-slot="10:00 AM">
+
+                        10:00 AM
+
+                        <span>
+                            Available
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        data-slot="11:00 AM">
+
+                        11:00 AM
+
+                        <span>
+                            Available
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        data-slot="01:00 PM">
+
+                        01:00 PM
+
+                        <span>
+                            Available
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="reserveBtn"
+                    class="btn btn-full">
+
+                    Reserve Selected Slot
+
+                </button>
+
+
+                <p
+                    id="reserveMessage"
+                    class="success-msg">
+                </p>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
