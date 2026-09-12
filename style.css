@@ -1,20 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
-    --bg: #07110d;
-    --panel: #0d1b14;
-    --panel2: #102218;
-    --text: #eef7ff;
-    --muted: #8da18f;
+    --bg: #0F0A06;          /* Very dark brown-black */
+    --panel: #1A100A;       /* Dark orange-brown */
+    --panel2: #24150C;      /* Slightly lighter panel */
+    --text: #FFF7ED;        /* Warm white */
+    --muted: #C4A994;       /* Muted warm beige */
 
-    /* ORANGE THEME */
-    --accent: #f97316;
-    --accent2: #ea580c;
+    --accent: #F97316;      /* Main orange */
+    --accent2: #EA580C;     /* Deep orange */
 
-    --line: #3a281b;
-    --green: #34d399;
+    --line: #4A2815;        /* Dark orange border */
 }
-
 * {
     box-sizing: border-box;
 }
