@@ -1469,6 +1469,7 @@ input:focus {
 
 .table-panel {
     overflow: auto;
+    margin-top: 25px;
 }
 
 table {
