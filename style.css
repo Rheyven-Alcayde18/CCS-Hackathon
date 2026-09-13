@@ -149,10 +149,10 @@ input {
     color: var(--accent-light);
 }
 
-
 /* =========================================================
    BUTTON
    ========================================================= */
+
 
 .btn {
     display: inline-block;
@@ -184,24 +184,30 @@ input {
     color: #2A1004;
 }
 
-.btn:active {
-    transform: translateY(0);
-}
-
 
 /* =========================================================
-   NAVBAR BUTTON FIX
+   REGISTER NAV BUTTON
    ========================================================= */
 
-.nav-links a.btn {
-    color: #FFFFFF;
+.nav-links a.btn,
+.nav-links a.btn.active {
+    color: #FFFFFF !important;
+
+    background: var(--accent);
+
+    border-color: var(--accent);
 }
 
-.nav-links a.btn:hover {
-    color: #2A1004;
+.nav-links a.btn:hover,
+.nav-links a.btn.active:hover {
+    color: #2A1004 !important;
+
     background: var(--accent-light);
-}
 
+    border-color: var(--accent-light);
+
+    transform: translateY(-2px);
+}
 
 /* =========================================================
    OUTLINE BUTTON
