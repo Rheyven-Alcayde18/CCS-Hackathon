@@ -185,24 +185,19 @@ input {
 
 .nav-links a.btn,
 .nav-links a.btn-outline {
-    background: transparent;
-
-    color: #FFFFFF;
-
-    border: 1px solid transparent;
+    background: transparent !important;
+    color: #FFFFFF !important;
+    border: 1px solid transparent !important;
     border-radius: 9px;
-
     padding: 10px 17px;
+    box-shadow: none;
 }
 
 .nav-links a.btn:hover,
 .nav-links a.btn-outline:hover {
-    background: var(--accent-light);
-
-    color: #2A1004;
-
-    border-color: var(--accent-light);
-
+    background: var(--accent) !important;
+    color: #FFFFFF !important;
+    border-color: var(--accent) !important;
     transform: translateY(-2px);
 }
 
