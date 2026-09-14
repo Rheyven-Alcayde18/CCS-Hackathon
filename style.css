@@ -62,6 +62,7 @@ input {
 
 .navbar {
     height: 76px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -69,6 +70,7 @@ input {
     padding: 0 6%;
 
     background: rgba(5, 5, 5, 0.96);
+
     border-bottom: 1px solid var(--line);
 
     backdrop-filter: blur(12px);
@@ -99,11 +101,12 @@ input {
     border-radius: 10px;
 
     background: var(--accent);
-    color: #1A0B02;
+    color: #FFFFFF;
 
     font-weight: 800;
 
-    box-shadow: 0 5px 20px rgba(249, 115, 22, 0.18);
+    box-shadow:
+        0 5px 20px rgba(249, 115, 22, 0.18);
 }
 
 .brand b {
@@ -131,6 +134,7 @@ input {
     gap: 25px;
 
     color: #BDBDBD;
+
     font-size: 13px;
 }
 
@@ -138,9 +142,8 @@ input {
     transition: 0.2s ease;
 }
 
-.nav-links a:hover,
-.nav-links .active,
-.active {
+.nav-links a:not(.btn):hover,
+.nav-links .active:not(.btn) {
     color: var(--accent-light);
 }
 
@@ -152,17 +155,18 @@ input {
 .btn {
     display: inline-block;
 
-    border: 1px solid transparent;
-    border-radius: 9px;
-
     padding: 10px 17px;
 
-    background: var(--accent);
-    color: #BDBDBD !important;
+    border: 1px solid var(--accent);
+    border-radius: 9px;
 
-    font-weight: 500;
+    background: var(--accent);
+
+    color: #FFFFFF !important;
+
+    font-weight: 700;
     font-size: 13px;
-   
+
     cursor: pointer;
 
     transition:
@@ -176,7 +180,10 @@ input {
     transform: translateY(-2px);
 
     background: var(--accent-light);
-    color: #2A1004;
+
+    border-color: var(--accent-light);
+
+    color: #2A1004 !important;
 }
 
 
@@ -184,22 +191,39 @@ input {
    NAVBAR BUTTONS
    ========================================================= */
 
-.nav-links a.btn,
+/* LOGIN */
 .nav-links a.btn-outline {
-    background: transparent !important;
-    color: #BDBDBD !important;
-    border: 1px solid transparent !important;
-    border-radius: 9px;
-    padding: 10px 17px;
-    box-shadow: none;
+    background: transparent;
+
+    border: 1px solid var(--line-light);
+
+    color: #FFFFFF !important;
 }
 
-.nav-links a.btn:hover,
 .nav-links a.btn-outline:hover {
-    background: var(--accent) !important;
+    background: var(--accent);
+
+    border-color: var(--accent);
+
     color: #FFFFFF !important;
-    border-color: var(--accent) !important;
-    transform: translateY(-2px);
+}
+
+
+/* REGISTER */
+.nav-links a.btn:not(.btn-outline) {
+    background: var(--accent);
+
+    border-color: var(--accent);
+
+    color: #FFFFFF !important;
+}
+
+.nav-links a.btn:not(.btn-outline):hover {
+    background: var(--accent-light);
+
+    border-color: var(--accent-light);
+
+    color: #2A1004 !important;
 }
 
 
@@ -220,6 +244,7 @@ input {
     min-height: calc(100vh - 76px);
 
     display: grid;
+
     grid-template-columns: 1.1fr 0.9fr;
 
     align-items: center;
@@ -257,11 +282,11 @@ input {
    ========================================================= */
 
 .hero h1 {
+    margin: 16px 0;
+
     font-size: clamp(48px, 7vw, 86px);
 
     line-height: 1.02;
-
-    margin: 16px 0;
 }
 
 .hero h1 span {
@@ -334,6 +359,7 @@ input {
     font-size: 11px;
 
     text-transform: uppercase;
+
     letter-spacing: 0.1em;
 }
 
@@ -348,11 +374,13 @@ input {
     position: relative;
 
     display: grid;
+
     place-items: center;
 
     overflow: hidden;
 
     border: 1px solid var(--line-light);
+
     border-radius: 24px;
 
     background:
@@ -380,8 +408,17 @@ input {
     border-radius: 50%;
 }
 
+
+/* =========================================================
+   HERO ICON
+   ========================================================= */
+
 .hero-orbit {
     position: relative;
+
+    z-index: 2;
+
+    color: var(--accent);
 
     font-size: 100px;
 
@@ -390,6 +427,12 @@ input {
             0 0 25px rgba(249, 115, 22, 0.45)
         );
 }
+
+.hero-orbit i {
+    color: var(--accent);
+}
+
+
 /* =========================================================
    REGISTRATION STATUS
    ========================================================= */
@@ -400,20 +443,26 @@ input {
     top: 25px;
     right: 25px;
 
+    z-index: 5;
+
     padding: 7px 10px;
 
-    border: 1px solid #4ADE80;
+    border: 1px solid var(--green);
+
     border-radius: 30px;
 
     background: rgba(74, 222, 128, 0.07);
 
-    color: #4ADE80 !important;
+    color: var(--green) !important;
 
     font-size: 10px;
     font-weight: 800;
 
-    box-shadow: 0 0 15px rgba(74, 222, 128, 0.08);
+    box-shadow:
+        0 0 15px rgba(74, 222, 128, 0.08);
 }
+
+
 /* =========================================================
    CODE WINDOW
    ========================================================= */
@@ -425,9 +474,12 @@ input {
     right: 25px;
     bottom: 25px;
 
+    z-index: 4;
+
     padding: 17px;
 
     border: 1px solid var(--line);
+
     border-radius: 13px;
 
     background: #090909;
@@ -462,6 +514,7 @@ input {
     color: var(--accent-light);
 
     font-family: monospace;
+
     font-size: 12px;
 }
 
@@ -554,6 +607,11 @@ input {
         0 10px 30px rgba(249, 115, 22, 0.06);
 }
 
+
+/* =========================================================
+   FEATURE ICONS
+   ========================================================= */
+
 .feature-card .icon {
     width: 48px;
     height: 48px;
@@ -564,6 +622,7 @@ input {
     margin-bottom: 18px;
 
     border: 1px solid rgba(249, 115, 22, 0.25);
+
     border-radius: 12px;
 
     background: rgba(249, 115, 22, 0.07);
@@ -575,6 +634,10 @@ input {
     transition: 0.2s ease;
 }
 
+.feature-card .icon i {
+    color: var(--accent);
+}
+
 .feature-card:hover .icon {
     background: var(--accent);
 
@@ -583,6 +646,10 @@ input {
     border-color: var(--accent);
 
     transform: translateY(-2px);
+}
+
+.feature-card:hover .icon i {
+    color: #2A1004;
 }
 
 .feature-card h3 {
@@ -616,6 +683,7 @@ input {
     padding: 15px 20px;
 
     border: 1px solid var(--line);
+
     border-radius: 10px;
 
     background: var(--panel);
@@ -642,10 +710,13 @@ input {
     padding: 35px 45px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     border: 1px solid var(--line-light);
+
     border-radius: 18px;
 
     background:
@@ -673,6 +744,7 @@ footer {
     padding: 25px 8%;
 
     display: flex;
+
     justify-content: space-between;
 
     border-top: 1px solid var(--line);
@@ -693,6 +765,7 @@ footer {
     min-height: 100vh;
 
     display: grid;
+
     place-items: center;
 
     padding: 30px;
@@ -718,6 +791,7 @@ footer {
     padding: 42px;
 
     border: 1px solid var(--line-light);
+
     border-radius: 22px;
 
     background: #0B0B0B;
@@ -810,6 +884,7 @@ label {
     color: #D4D4D4;
 
     font-size: 12px;
+
     font-weight: 600;
 }
 
@@ -819,11 +894,13 @@ input {
     padding: 13px 14px;
 
     border: 1px solid var(--line);
+
     border-radius: 10px;
 
     outline: none;
 
     background: #070707;
+
     color: var(--text);
 
     transition: 0.25s ease;
@@ -867,6 +944,7 @@ input:focus {
     padding: 14px;
 
     border: none;
+
     border-radius: 10px;
 
     background:
@@ -879,6 +957,7 @@ input:focus {
     color: #FFFFFF;
 
     font-size: 15px;
+
     font-weight: 800;
 
     cursor: pointer;
@@ -935,6 +1014,7 @@ input:focus {
     padding: 12px;
 
     border: 1px solid rgba(249, 115, 22, 0.18);
+
     border-radius: 10px;
 
     background: #0D0D0D;
@@ -994,6 +1074,7 @@ input:focus {
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
     margin-bottom: 35px;
@@ -1020,6 +1101,7 @@ input:focus {
     padding: 8px 12px;
 
     border: 1px solid rgba(74, 222, 128, 0.35);
+
     border-radius: 20px;
 
     background: rgba(74, 222, 128, 0.07);
@@ -1044,6 +1126,7 @@ input:focus {
     color: #737373;
 
     font-size: 10px;
+
     letter-spacing: 0.1em;
 }
 
@@ -1089,9 +1172,11 @@ input:focus {
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
     margin-bottom: 10px;
+
     padding-bottom: 15px;
 
     border-bottom: 1px solid var(--line);
@@ -1112,6 +1197,7 @@ input:focus {
     padding: 5px 8px;
 
     border: 1px solid rgba(249, 115, 22, 0.25);
+
     border-radius: 5px;
 
     background: rgba(249, 115, 22, 0.07);
@@ -1140,6 +1226,7 @@ input:focus {
     padding: 18px;
 
     border: 1px solid var(--line);
+
     border-radius: 10px;
 
     transition: 0.2s ease;
@@ -1176,6 +1263,7 @@ input:focus {
     justify-content: space-between;
 
     margin: 0;
+
     padding: 10px 0;
 
     border-bottom: 1px solid var(--line);
@@ -1213,6 +1301,7 @@ input:focus {
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 }
 
@@ -1269,9 +1358,11 @@ input:focus {
     min-height: 55px;
 
     display: grid;
+
     place-items: center;
 
     border: 1px solid var(--line);
+
     border-radius: 8px;
 
     background: #090909;
@@ -1327,6 +1418,7 @@ input:focus {
     padding: 13px;
 
     border: 1px solid var(--line);
+
     border-radius: 8px;
 
     background: #090909;
@@ -1476,6 +1568,7 @@ th {
 
     .navbar {
         height: auto;
+
         min-height: 76px;
 
         flex-wrap: wrap;
@@ -1511,7 +1604,6 @@ th {
         font-size: 12px;
     }
 
-
     /* HERO */
 
     .hero {
@@ -1524,7 +1616,6 @@ th {
         height: 300px;
     }
 
-
     /* CARDS */
 
     .three,
@@ -1533,7 +1624,6 @@ th {
     .reservation-layout {
         grid-template-columns: 1fr;
     }
-
 
     /* FORM */
 
@@ -1545,13 +1635,11 @@ th {
         grid-column: auto;
     }
 
-
     /* STATS */
 
     .stats {
         gap: 20px;
     }
-
 
     /* CTA */
 
@@ -1563,7 +1651,6 @@ th {
         gap: 20px;
     }
 
-
     /* FOOTER */
 
     footer {
@@ -1571,7 +1658,6 @@ th {
 
         gap: 10px;
     }
-
 
     /* WELCOME */
 
@@ -1583,7 +1669,6 @@ th {
         gap: 15px;
     }
 
-
     /* SCHEDULE */
 
     .schedule-item {
@@ -1593,7 +1678,6 @@ th {
     .schedule-item > span {
         text-align: left;
     }
-
 
     /* SECTIONS */
 
