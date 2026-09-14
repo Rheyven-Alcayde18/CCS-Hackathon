@@ -158,10 +158,11 @@ input {
     padding: 10px 17px;
 
     background: var(--accent);
-    color: #FFFFFF;
+    color: #BDBDBD !important;
 
     font-weight: 300;
-
+    font-size: 13px;
+   
     cursor: pointer;
 
     transition:
@@ -404,16 +405,17 @@ input {
     padding: 7px 10px;
 
     border-radius: 30px;
-    border: 1px solid #333333;
+    border: 1px solid rgba(74, 222, 128, 0.45);
 
-    background: #0D0D0D;
+    background: rgba(74, 222, 128, 0.10);
 
-    color: var(--accent);
+    color: var(--green);
 
     font-size: 10px;
     font-weight: 800;
-}
 
+    box-shadow: 0 0 15px rgba(74, 222, 128, 0.08);
+}
 
 /* =========================================================
    CODE WINDOW
