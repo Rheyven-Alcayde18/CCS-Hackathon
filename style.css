@@ -593,9 +593,32 @@ input {
 }
 
 .feature-card .icon {
+    width: 48px;
+    height: 48px;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 18px;
+
+    border: 1px solid rgba(249, 115, 22, 0.25);
+    border-radius: 12px;
+
+    background: rgba(249, 115, 22, 0.07);
+
     color: var(--accent);
 
-    font-size: 28px;
+    font-size: 21px;
+
+    transition: .2s ease;
+}
+
+.feature-card:hover .icon {
+    background: var(--accent);
+    color: #2A1004;
+    border-color: var(--accent);
+
+    transform: translateY(-2px);
 }
 
 .feature-card h3 {
